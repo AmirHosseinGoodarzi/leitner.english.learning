@@ -1,4 +1,4 @@
 export default function HowItWorks() {
-    return <div>View</div>;
+    return <div>HowItWorks</div>;
   }
   

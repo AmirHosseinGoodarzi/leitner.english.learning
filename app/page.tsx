@@ -8,6 +8,7 @@ import { THEMES } from "@/utils/enums";
 import useAuth from "@/hooks/useAuth";
 
 export default function Home() {
+  const { currentTheme } = useTheme();
   const { googleSignIn, user } = useAuth();
   const googleSignInHandler = async () => {
     try {
@@ -16,8 +17,6 @@ export default function Home() {
       console.log(error);
     }
   };
-
-  const { currentTheme } = useTheme();
   return (
     <div className="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
       <div className="min-h-screen relative flex items-center justify-center p-8">
@@ -60,7 +59,13 @@ export default function Home() {
               .
             </p>
             <div className="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
-              {!user ? (
+              {user && user.email ? (
+                <Link href={ROUTES_OBJECT.today}>
+                  <button className="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400">
+                    Get started
+                  </button>
+                </Link>
+              ) : (
                 <div className="w-full md:w-1/2 mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 p-7 pb-0">
                   <button
                     onClick={googleSignInHandler}
@@ -78,12 +83,6 @@ export default function Home() {
                     </div>
                   </button>
                 </div>
-              ) : (
-                <Link href={ROUTES_OBJECT.today}>
-                  <button className="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400">
-                    Get started
-                  </button>
-                </Link>
               )}
             </div>
           </div>
