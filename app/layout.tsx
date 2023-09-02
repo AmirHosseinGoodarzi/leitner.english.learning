@@ -1,8 +1,11 @@
+"use client";
 import "./globals.scss";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import ThemeContextProvider from "@/contexts/themeContext";
+import AuthContextProvider from "@/contexts/authContext";
+import { Toaster } from "react-hot-toast";
+import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "Learn English",
@@ -14,9 +17,28 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: Infinity,
+      },
+    },
+  });
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      {/* <ErrorBoundary> */}
+      <QueryClientProvider client={queryClient}>
+        <ThemeContextProvider>
+          <AuthContextProvider>
+            <body>
+              <Navbar />
+              {children}
+              <Toaster position="top-center" />
+            </body>
+          </AuthContextProvider>
+        </ThemeContextProvider>
+      </QueryClientProvider>
+      {/* </ErrorBoundary> */}
     </html>
   );
 }

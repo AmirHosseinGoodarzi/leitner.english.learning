@@ -1,0 +1,9 @@
+.theme_selector {
+  > button {
+    @apply p-1.5 text-[#929292] dark:text-[#999];
+    &.active {
+      @apply bg-slate-300 dark:bg-slate-800
+        rounded-full text-black dark:text-white;
+    }
+  }
+}
