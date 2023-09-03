@@ -10,7 +10,6 @@ import Image from "next/image";
 
 const Navbar = () => {
   const { logOut, user } = useAuth();
-  console.log({ user });
   const { currentTheme } = useTheme();
   const pathname = usePathname();
   const signOutHandler = async () => {
@@ -31,16 +30,21 @@ const Navbar = () => {
     >
       <div className="w-full mx-auto max-w-5xl flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200">
         <Link href={ROUTES_OBJECT.home}>
-          <Image
-            src={
-              currentTheme === THEMES.DARK
-                ? "/assets/images/LogoW.png"
-                : "/assets/images/LogoB.png"
-            }
-            alt="Logo"
-            width={60}
-            height={60}
-          />
+          {currentTheme === THEMES.DARK ? (
+            <Image
+              src="/assets/images/LogoW.png"
+              alt="Logo"
+              width={64}
+              height={46}
+            />
+          ) : (
+            <Image
+              src="/assets/images/LogoB.png"
+              alt="Logo"
+              width={64}
+              height={46}
+            />
+          )}
         </Link>
         <div className="flex items-center">
           {user && user.email ? (
