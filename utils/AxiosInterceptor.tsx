@@ -2,7 +2,7 @@ import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
 import Swal from "sweetalert2";
 
 const client = axios.create({
-  // baseURL: import.meta.env.VITE_BASEURL,
+  baseURL: "/api",
 });
 const onRequest = (config: InternalAxiosRequestConfig) => {
   // const token = localStorage.getItem(import.meta.env.VITE_AUTH_TOKEN_KEY);

@@ -1,8 +1,8 @@
-import { useLocation } from "react-router-dom";
-import { CategoryEnum } from "~/utils/enums";
+import { usePathname } from "next/navigation";
+import { CategoryEnum } from "@/utils/enums";
 
 const useCategory = () => {
-  const { pathname } = useLocation();
+  const pathname = usePathname();
   if (pathname === "/today") return CategoryEnum.ONE;
   // if (pathname === "/one") return CategoryEnum.ONE;
   // if (pathname === "/two") return CategoryEnum.TWO;

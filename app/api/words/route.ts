@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
+import connectDB from "@/libs/mongodb";
+import WordModel from "@/models/wordModel";
 
 export async function POST(req: Request) {
   try {
+    await connectDB();
     const { category } = await req.json();
     const startToday = new Date();
     startToday.setUTCHours(0, 0, 0, 0);
@@ -14,11 +17,10 @@ export async function POST(req: Request) {
     if (category !== null && category !== undefined) {
       filterBody.category = category;
     }
-    // const doc = await WordModel.find(filterBody);
+    const doc = await WordModel.find(filterBody);
     return NextResponse.json({
       status: true,
-      //   data: doc,
-      message: filterBody,
+      data: doc,
     });
   } catch (err: any) {
     return NextResponse.json({
