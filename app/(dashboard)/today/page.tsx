@@ -69,7 +69,13 @@ export default function Today() {
         </>
       ) : (
         <div>
-          <Image src="../assets/images/empty.svg" alt="..." className="mx-auto mb-5" />
+          <Image
+            src="./assets/images/empty.svg"
+            width={300}
+            height={300}
+            alt="..."
+            className="mx-auto mb-5"
+          />
           <p className="text-center">
             That`s great 👍 You reviewed all the words or you have no word for
             review <b className="text-slate-700 dark:text-slate-300">Today</b>,

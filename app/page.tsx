@@ -43,7 +43,7 @@ export default function Home() {
           </div>
           <div className="relative max-w-5xl mx-auto pt-10">
             <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
-              Rapidly Learning English with Leitner's method.
+              Rapidly Learning English with Leitner`s method.
             </h1>
             <p className="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
               This application will help you to
@@ -73,7 +73,7 @@ export default function Home() {
                   >
                     <div className="flex item-center justify-center gap-3">
                       <Image
-                        src="/assets/images/icons/google.svg"
+                        src="/assets/images/google.svg"
                         alt="G"
                         width={20}
                         height={20}

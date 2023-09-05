@@ -6,6 +6,7 @@ import { CategoryEnum } from "@/utils/enums";
 import toast from "react-hot-toast";
 import ROUTES_OBJECT from "@/utils/RoutesObject";
 import useCategory from "@/hooks/useCategory";
+import { useRouter } from "next/navigation";
 
 export const useGetAllWords = () => {
   const category = useCategory();
@@ -48,15 +49,8 @@ export const useAddEditWord = () => {
   const queryClient = useQueryClient();
   const { user } = useAuth();
   return useMutation(
-    async ({
-      id,
-      requestBody,
-    }: {
-      id?: string;
-      requestBody: { front: string; back: string };
-    }) => {
-      const address = id ? `/words/addOrEdit/${id}` : "/words/addOrEdit";
-      const { data } = await client.post(address, {
+    async (requestBody: { _id?: string; front: string; back: string }) => {
+      const { data } = await client.post("/words/addOrEdit", {
         user: user.email,
         ...requestBody,
       });
@@ -66,10 +60,10 @@ export const useAddEditWord = () => {
       onSuccess: (response, value) => {
         if (response.status) {
           let message = "";
-          if (!value.id) {
+          if (!value._id) {
             message = "New word added";
           } else {
-            message = `${value.requestBody.front} updated`;
+            message = `${value.front} updated`;
           }
           queryClient.invalidateQueries(["WORD_LIST"]);
           toast.success(message);
@@ -86,7 +80,7 @@ export const useAddEditWord = () => {
 };
 
 export const useGetCardById = () => {
-  // const navigate = useNavigate();
+  const router = useRouter();
   return useMutation(
     async (wordId: string) => {
       const { data } = await client.post("/words/getCardById", { wordId });
@@ -95,7 +89,7 @@ export const useGetCardById = () => {
     {
       onSuccess: (data) => {
         if (!data.status) {
-          // navigate(ROUTES_OBJECT.configCard);
+          router.push(ROUTES_OBJECT.configCard);
         }
       },
     }

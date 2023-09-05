@@ -1,30 +1,36 @@
 import { CategoryEnum } from "@/utils/enums";
 import { NextResponse } from "next/server";
+import connectDB from "@/libs/mongodb";
+import WordModel from "@/models/wordModel";
 
 export async function POST(req: Request) {
   try {
-    const { searchParams } = new URL(req.url);
-    const id = searchParams.get("id");
-    if (id) {
-      //   const doc = await WordModel.findByIdAndUpdate(id, req.body, {
-      //     new: true,
-      //     runValidators: true,
-      //   });
-      //   if (!doc) {
-      //     return next(new AppError("Word with this id doesn't Exist!", 404));
-      //   }
+    await connectDB();
+    const body = await req.json();
+    if (body._id) {
+      const doc = await WordModel.findByIdAndUpdate(body._id, body, {
+        new: true,
+        runValidators: true,
+      });
+      if (!doc) {
+        return NextResponse.json({
+          status: false,
+          message: "Word with this id doesn't Exist!",
+          data: null,
+        });
+      }
       return NextResponse.json({
         status: true,
-        // data: doc,
+        data: doc,
       });
     } else {
-      //   const doc = await WordModel.create({
-      //     ...req.body,
-      //     category: CategoryEnum.ONE,
-      //   });
+      const doc = await WordModel.create({
+        ...body,
+        category: CategoryEnum.ONE,
+      });
       return NextResponse.json({
         status: true,
-        // data: doc,
+        data: doc,
       });
     }
   } catch (err: any) {
