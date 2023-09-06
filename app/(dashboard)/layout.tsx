@@ -11,7 +11,7 @@ export default function DashboardLayout({
         <div className="w-[108rem] flex-none flex justify-end">
           <picture>
             <img
-              src="/assets/images/docs-dark.png"
+              src="/assets/images/docs.png"
               alt=""
               className="w-[71.75rem] flex-none max-w-none dark:hidden"
               decoding="async"
@@ -19,7 +19,7 @@ export default function DashboardLayout({
           </picture>
           <picture>
             <img
-              src="/assets/images/docs.png"
+              src="/assets/images/docs-dark.png"
               alt=""
               className="w-[90rem] flex-none max-w-none hidden dark:block"
               decoding="async"
