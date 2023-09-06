@@ -28,6 +28,24 @@ export const useGetAllWords = () => {
   });
 };
 
+export const useView = () => {
+  const { user } = useAuth();
+  return useQuery(["WORD_LIST", "view_box"], async () => {
+    const { data } = await client.post("/words/view", {
+      user: user.email,
+    });
+    if (!data.status) {
+      Swal.fire({
+        icon: "error",
+        title: "error",
+        text: data.message,
+      });
+      return;
+    }
+    return data.data;
+  });
+};
+
 export const useRebuildWords = () => {
   const queryClient = useQueryClient();
   const { user } = useAuth();

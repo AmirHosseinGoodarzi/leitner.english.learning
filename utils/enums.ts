@@ -14,3 +14,4 @@ export enum CategoryEnum {
   FIFTEEN,
   COMPLETED,
 }
+export const CategoryArray = [1, 2, 4, 8, 15, "✅"];
