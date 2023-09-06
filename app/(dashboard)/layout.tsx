@@ -1,10 +1,14 @@
+"use client";
+
 import Sidebar from "@/components/sidebar";
+import useAuth from "@/hooks/useAuth";
 
 export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const { userLoading } = useAuth();
   return (
     <div className="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
       <div className="absolute z-20 top-0 inset-x-0 flex justify-center overflow-hidden pointer-events-none">
@@ -27,16 +31,20 @@ export default function DashboardLayout({
           </picture>
         </div>
       </div>
-      <div className="overflow-hidden">
-        <div className="min-h-screen max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8">
-          <Sidebar />
-          <div className="lg:pl-[19.5rem] pt-20">
-            <main className="max-w-3xl mx-auto relative z-20 mt-20 lg:mt-10 xl:max-w-none">
-              {children}
-            </main>
+      {userLoading ? (
+        <div className="fixed z-50 bg-red-500 w-full h-full">userLoading</div>
+      ) : (
+        <div className="overflow-hidden">
+          <div className="min-h-screen max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8">
+            <Sidebar />
+            <div className="lg:pl-[19.5rem] pt-20">
+              <main className="max-w-3xl mx-auto relative z-20 mt-20 lg:mt-10 xl:max-w-none">
+                {children}
+              </main>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
