@@ -4,14 +4,23 @@ import sidebarItems from "@/data/sidebarItems";
 import useSidebar from "@/hooks/useSidebar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { XLg } from "react-bootstrap-icons";
+import { BoxArrowRight, XLg } from "react-bootstrap-icons";
+import useAuth from "@/hooks/useAuth";
 
 const Sidebar = () => {
   const pathname = usePathname();
   const { isOpen, setIsOpen } = useSidebar();
+  const { logOut, user } = useAuth();
+  const signOutHandler = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div
-      className={`fixed z-50 inset-0 top-0 lg:top-[8rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19rem] pb-10 pl-8 pr-6 overflow-y-auto bg-slate-200 dark:bg-slate-800 lg:bg-transparent lg:dark:bg-transparent pt-16 lg:pt-0 transition-all ${
+      className={`fixed z-50 inset-0 top-0 lg:top-[8rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19rem] pb-10 pl-8 pr-6 overflow-y-auto bg-slate-50 dark:bg-slate-800 lg:bg-transparent lg:dark:bg-transparent pt-16 lg:pt-0 transition-all ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       } lg:translate-x-0`}
     >
@@ -21,7 +30,7 @@ const Sidebar = () => {
           setIsOpen(false);
         }}
       >
-        <XLg className="text-2xl"/>
+        <XLg className="text-2xl" />
       </button>
       <nav id="nav" className="lg:text-sm lg:leading-6 relative">
         <ul>
@@ -82,6 +91,24 @@ const Sidebar = () => {
               })}
             </ul>
           </li>
+          {user && user.email ? (
+            <li className="flex flex-col mt-16">
+              <p className="text-sm mb-2">Logged in as:</p>
+              <p className="text-sm text-ellipsis overflow-hidden w-52 text-slate-700 dark:text-white">
+                {user.email}
+              </p>
+              <br />
+              <button
+                onClick={signOutHandler}
+                className="flex items-center lg:text-sm lg:leading-6 mb-4 text-slate-700 hover:text-sky-500 dark:text-slate-400 dark:hover:text-slate-300"
+              >
+                <BoxArrowRight className="text-xl mr-4" />
+                Log out
+              </button>
+            </li>
+          ) : (
+            <></>
+          )}
         </ul>
       </nav>
     </div>
