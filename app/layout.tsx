@@ -28,7 +28,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
         <meta
           name="description"
-          content="Rapidly Learning English with Leitner's method."
+          content="Rapidly Learning English with Leitner’s method."
         />
         <link rel="manifest" href="./manifest.webmanifest" />
         <meta name="theme-color" content="#0f172a" />

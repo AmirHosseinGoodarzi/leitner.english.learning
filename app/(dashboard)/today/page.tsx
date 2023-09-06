@@ -58,7 +58,7 @@ export default function Today() {
                 moveWordHandler(false);
               }}
             >
-              I don't know !
+              I don’t know !
             </Button>
             <Button
               variant={ButtonTypes.Fill}

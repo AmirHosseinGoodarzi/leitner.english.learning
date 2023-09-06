@@ -54,7 +54,7 @@ export default {
     },
     {
       to: ROUTES_OBJECT.view,
-      name: "Leitner's view",
+      name: "Leitner’s view",
       icon: (
         <div className="mr-4 rounded-md ring-1 ring-slate-900/5 shadow-sm group-hover:shadow group-hover:ring-slate-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-indigo-200 dark:group-hover:bg-indigo-500 dark:bg-slate-800 dark:highlight-white/5">
           <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none">

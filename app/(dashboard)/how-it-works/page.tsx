@@ -6,7 +6,7 @@ export default function HowItWorks() {
       <PageHeader
         hint="Help"
         title="How the Leitner box works?"
-        description="Read the part below if you don't know what is the Leitner box or how it works"
+        description="Read the part below if you don’t know what is the Leitner box or how it works"
       />
       <p className="mt-4 text-base text-slate-600 dark:text-slate-300">
         The Leitner system is a method of efficiently using flashcards that was

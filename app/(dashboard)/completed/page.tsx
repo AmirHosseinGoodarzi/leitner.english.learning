@@ -14,7 +14,7 @@ export default function Completed() {
       <PageHeader
         hint="Storage"
         title="Completed Cards"
-        description="All the cards that you'd completed them"
+        description="All the cards that you’d completed them"
       />
       <br />
       {wordsLoading ? (
@@ -35,7 +35,7 @@ export default function Completed() {
             className="mx-auto mb-5"
           />
           <p className="text-center">
-            You haven't complete any words yet 😔,
+            You haven’t complete any words yet 😔,
             <br />
             Add new words to your vocabulary storage <br />
             and <br /> visit the application everyday.

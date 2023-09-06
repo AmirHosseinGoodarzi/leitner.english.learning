@@ -15,7 +15,7 @@ export async function POST(req: Request) {
       if (!doc) {
         return NextResponse.json({
           status: false,
-          message: "Word with this id doesn't Exist!",
+          message: "Word with this id doesn’t Exist!",
           data: null,
         });
       }
