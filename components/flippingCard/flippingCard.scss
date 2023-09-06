@@ -1,0 +1,21 @@
+.flip_container {
+  perspective: 1000;
+  .front,
+  .back {
+    @apply w-full h-full absolute rounded-lg p-3 text-black bg-gray-100 dark:bg-gray-50 shadow-md;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+  .back {
+    transform: rotateY(-180deg);
+  }
+  &.flipped {
+    .back {
+      transform: rotateY(0deg);
+    }
+    .front {
+      transform: rotateY(180deg);
+    }
+  }
+}

@@ -124,7 +124,7 @@ export const useDeleteWord = () => {
 export const useMoveWord = () => {
   return useMutation(
     async (requestBody: {
-      id: string;
+      _id: string;
       isOk: boolean;
       category: CategoryEnum;
     }) => await client.post("/words/move", requestBody),

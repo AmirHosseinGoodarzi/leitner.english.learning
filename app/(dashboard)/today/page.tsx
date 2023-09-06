@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/components/button";
+import FlippingCard from "@/components/flippingCard";
 import PageHeader from "@/components/pageHeader";
 import { useGetAllWords, useMoveWord } from "@/services/Words";
 import { ButtonTypes } from "@/utils/enums";
@@ -16,7 +17,7 @@ export default function Today() {
   const moveWordHandler = (isOk: boolean) => {
     moveWord(
       {
-        id: words[activedCardIndex]._id,
+        _id: words[activedCardIndex]._id,
         isOk,
         category: words[activedCardIndex].category,
       },
@@ -29,10 +30,8 @@ export default function Today() {
       }
     );
   };
-  console.log({ words });
   return (
     <div className="relative pb-10">
-      {/* <Loading show={wordsLoading} /> */}
       <PageHeader
         hint="Today"
         title="Review your today words"
@@ -42,7 +41,7 @@ export default function Today() {
       {words?.length > 0 && words[activedCardIndex] ? (
         <>
           <div className="flex justify-center items-center gap-5">
-            {/* <FlippingCard word={words[activedCardIndex]} /> */}
+            <FlippingCard word={words[activedCardIndex]} />
           </div>
           <br />
           <br />

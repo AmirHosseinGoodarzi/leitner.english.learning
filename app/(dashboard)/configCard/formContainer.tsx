@@ -74,7 +74,7 @@ export default function FormContainer({
           icon={<Plus className="text-2xl" />}
           loading={addEditWordLoading}
         >
-          Add new card
+          Submit
         </Button>
       </div>
     </div>
