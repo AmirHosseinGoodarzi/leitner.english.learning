@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import PageHeader from "@/components/pageHeader";
 import FormContainer from "../formContainer";
 import { useGetCardById } from "@/services/Words";
+import InnerContentLoading from "@/components/innerContentLoading";
 
 export default function EditCard({ params }: { params: { id: string } }) {
   const [initialFormValues, setInitialFormValues] = useState({
@@ -32,7 +33,11 @@ export default function EditCard({ params }: { params: { id: string } }) {
         description="Edit and Update your word information"
       />
       <br />
-      <FormContainer initialFormValues={initialFormValues} />
+      {getCardByIdLoading ? (
+        <InnerContentLoading />
+      ) : (
+        <FormContainer initialFormValues={initialFormValues} />
+      )}
     </div>
   );
 }

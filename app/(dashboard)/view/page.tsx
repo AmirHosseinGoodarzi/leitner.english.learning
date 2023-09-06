@@ -1,5 +1,6 @@
 import PageHeader from "@/components/pageHeader";
 import styles from "./leitnerView.module.scss";
+// import InnerContentLoading from "@/components/innerContentLoading";
 
 export default function View() {
   return (
@@ -11,6 +12,11 @@ export default function View() {
       />
       <br />
       <br />
+      {/* {true ? (
+        <InnerContentLoading />
+      ) : (
+   
+      )} */}
       <div className="w-full flex items-center justify-center">
         <ul className={styles.view_box}>
           <li

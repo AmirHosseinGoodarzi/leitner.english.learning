@@ -1,7 +1,10 @@
 "use client";
 
+import SimpleFlippingCard from "@/components/flippingCard/simpleCard";
+import InnerContentLoading from "@/components/innerContentLoading";
 import PageHeader from "@/components/pageHeader";
 import { useGetAllWords } from "@/services/Words";
+import { WordType } from "@/utils/types";
 import Image from "next/image";
 
 export default function Completed() {
@@ -15,14 +18,12 @@ export default function Completed() {
       />
       <br />
       {wordsLoading ? (
-        // <CardsLoading />
-        <p>loading</p>
+        <InnerContentLoading />
       ) : words.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-center gap-5">
-          {/* {words.map((word: WordType, index: number) => {
+          {words.map((word: WordType, index: number) => {
             return <SimpleFlippingCard word={word} key={index} />;
-          })} */}
-          ssss
+          })}
         </div>
       ) : (
         <div>

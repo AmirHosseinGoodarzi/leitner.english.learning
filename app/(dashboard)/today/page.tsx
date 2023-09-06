@@ -2,6 +2,7 @@
 
 import Button from "@/components/button";
 import FlippingCard from "@/components/flippingCard";
+import InnerContentLoading from "@/components/innerContentLoading";
 import PageHeader from "@/components/pageHeader";
 import { useGetAllWords, useMoveWord } from "@/services/Words";
 import { ButtonTypes } from "@/utils/enums";
@@ -38,7 +39,9 @@ export default function Today() {
         description="Try to answer the meanings and pronunciation fast"
       />
       <br />
-      {words?.length > 0 && words[activedCardIndex] ? (
+      {wordsLoading ? (
+        <InnerContentLoading />
+      ) : words?.length > 0 && words[activedCardIndex] ? (
         <>
           <div className="flex justify-center items-center gap-5">
             <FlippingCard word={words[activedCardIndex]} />
