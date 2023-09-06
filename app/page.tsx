@@ -7,10 +7,11 @@ import useTheme from "@/hooks/useTheme";
 import { THEMES } from "@/utils/enums";
 import useAuth from "@/hooks/useAuth";
 import Button from "@/components/button";
+import { BeatLoader } from "react-spinners";
 
 export default function Home() {
   const { currentTheme } = useTheme();
-  const { googleSignIn, user } = useAuth();
+  const { googleSignIn, user, userLoading } = useAuth();
   const googleSignInHandler = async () => {
     try {
       await googleSignIn();
@@ -60,7 +61,9 @@ export default function Home() {
               .
             </p>
             <div className="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
-              {user && user.email ? (
+              {userLoading ? (
+                <BeatLoader color="#38bdf8" />
+              ) : user && user.email ? (
                 <Link href={ROUTES_OBJECT.today}>
                   <Button icon={"->"}>Get started</Button>
                 </Link>
