@@ -8,7 +8,7 @@ import { useGetAllWords, useMoveWord } from "@/services/Words";
 import { ButtonTypes } from "@/utils/enums";
 import Image from "next/image";
 import { useState } from "react";
-import { Check2All } from "react-bootstrap-icons";
+import { Check2All, EmojiFrownFill } from "react-bootstrap-icons";
 
 export default function Today() {
   const [activedCardIndex, setActivedCardIndex] = useState(0);
@@ -43,34 +43,31 @@ export default function Today() {
         <InnerContentLoading />
       ) : words?.length > 0 && words[activedCardIndex] ? (
         <>
-          <div className="flex justify-center items-center gap-5">
+          <div className="flex flex-col justify-center items-center gap-7">
             <FlippingCard word={words[activedCardIndex]} />
+            <footer className="flex flex-col-reverse sm:flex-row items-center justify-center gap-5 sticky bottom-0 w-full rounded-md p-2">
+              <Button
+                variant={ButtonTypes.Outline}
+                loading={moveWordLoading}
+                icon={<EmojiFrownFill className="text-2xl" />}
+                onClick={() => {
+                  moveWordHandler(false);
+                }}
+              >
+                I don’t know
+              </Button>
+              <Button
+                variant={ButtonTypes.Fill}
+                icon={<Check2All className="text-2xl" />}
+                loading={moveWordLoading}
+                onClick={() => {
+                  moveWordHandler(true);
+                }}
+              >
+                I know this
+              </Button>
+            </footer>
           </div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <footer className="lg:h-16 flex items-center justify-center gap-5 flex-wrap-reverse sticky bottom-0 w-full rounded-md p-2">
-            <Button
-              variant={ButtonTypes.Outline}
-              loading={moveWordLoading}
-              onClick={() => {
-                moveWordHandler(false);
-              }}
-            >
-              I don’t know !
-            </Button>
-            <Button
-              variant={ButtonTypes.Fill}
-              icon={<Check2All className="text-2xl" />}
-              loading={moveWordLoading}
-              onClick={() => {
-                moveWordHandler(true);
-              }}
-            >
-              I know this
-            </Button>
-          </footer>
         </>
       ) : (
         <div>

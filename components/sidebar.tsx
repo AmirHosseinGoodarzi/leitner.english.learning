@@ -1,16 +1,23 @@
 "use client";
 
+import { useRef } from "react";
 import sidebarItems from "@/data/sidebarItems";
 import useSidebar from "@/hooks/useSidebar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BoxArrowRight, XLg } from "react-bootstrap-icons";
 import useAuth from "@/hooks/useAuth";
+import useOnClickOutside from "@/hooks/useOnClickOutside";
 
 const Sidebar = () => {
   const pathname = usePathname();
   const { isOpen, setIsOpen } = useSidebar();
   const { logOut, user } = useAuth();
+  const sidebarRef = useRef<HTMLDivElement | null>(null);
+  useOnClickOutside(sidebarRef, () => {
+    setIsOpen(false);
+  });
+
   const signOutHandler = async () => {
     try {
       await logOut();
@@ -20,6 +27,7 @@ const Sidebar = () => {
   };
   return (
     <div
+      ref={sidebarRef}
       className={`fixed z-50 inset-0 top-0 lg:top-[8rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19rem] pb-10 pl-8 pr-6 overflow-y-auto bg-slate-50 dark:bg-slate-800 lg:bg-transparent lg:dark:bg-transparent pt-16 lg:pt-0 transition-all ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       } lg:translate-x-0`}
