@@ -2,6 +2,7 @@
 
 import Sidebar from "@/components/sidebar";
 import useAuth from "@/hooks/useAuth";
+import { CircleLoader } from "react-spinners";
 
 export default function DashboardLayout({
   children,
@@ -32,7 +33,10 @@ export default function DashboardLayout({
         </div>
       </div>
       {userLoading ? (
-        <div className="fixed z-50 bg-red-500 w-full h-full">userLoading</div>
+        <div className="fixed z-50 bg-white dark:bg-slate-800 w-full h-full flex flex-col gap-16 lg:gap-10 items-center justify-center p-10">
+          <CircleLoader size={150} color="#38bdf8" />
+          <h1 className="text-2xl lg:text-xl text-slate-800 dark:text-slate-200 animate-pulse text-center">Getting user account information ...</h1>
+        </div>
       ) : (
         <div className="overflow-hidden">
           <div className="min-h-screen max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8">
