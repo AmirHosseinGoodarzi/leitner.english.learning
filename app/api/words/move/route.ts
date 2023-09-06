@@ -1,9 +1,12 @@
-import { CategoryEnum } from "@/utils/enums";
 import { NextResponse } from "next/server";
+import { CategoryEnum } from "@/utils/enums";
+import connectDB from "@/libs/mongodb";
+import WordModel from "@/models/wordModel";
 
 export async function POST(req: Request) {
   try {
-    const { id, isOk, category } = await req.json();
+    await connectDB();
+    const { _id, isOk, category } = await req.json();
     if (isOk) {
       const newMovedTo = new Date();
       let newCategory = CategoryEnum.ONE;
@@ -31,10 +34,10 @@ export async function POST(req: Request) {
           break;
       }
       if (newMovedTo && newCategory) {
-        // await WordModel.findByIdAndUpdate(id, {
-        //   movedTo: newMovedTo,
-        //   category: newCategory,
-        // });
+        await WordModel.findByIdAndUpdate(_id, {
+          movedTo: newMovedTo,
+          category: newCategory,
+        });
       } else {
         return NextResponse.json({
           status: false,
@@ -44,10 +47,10 @@ export async function POST(req: Request) {
     } else {
       const newMovedTo = new Date();
       newMovedTo.setDate(newMovedTo.getDate() + 1);
-      //   await WordModel.findByIdAndUpdate(id, {
-      //     movedTo: newMovedTo,
-      //     category: CategoryEnum.ONE,
-      //   });
+      await WordModel.findByIdAndUpdate(_id, {
+        movedTo: newMovedTo,
+        category: CategoryEnum.ONE,
+      });
     }
     return NextResponse.json({
       status: true,
