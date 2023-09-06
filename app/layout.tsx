@@ -1,4 +1,5 @@
 "use client";
+
 import "./globals.scss";
 import type { Metadata } from "next";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -6,6 +7,7 @@ import ThemeContextProvider from "@/contexts/themeContext";
 import AuthContextProvider from "@/contexts/authContext";
 import { Toaster } from "react-hot-toast";
 import Navbar from "@/components/navbar";
+import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 
 export const metadata: Metadata = {
   title: "Learn English",
@@ -26,7 +28,6 @@ export default function RootLayout({
   });
   return (
     <html lang="en">
-      {/* <ErrorBoundary> */}
       <QueryClientProvider client={queryClient}>
         <ThemeContextProvider>
           <AuthContextProvider>
@@ -34,11 +35,16 @@ export default function RootLayout({
               <Navbar />
               {children}
               <Toaster position="top-center" />
+              <ProgressBar
+                height="4px"
+                color="#38BDF8"
+                options={{ showSpinner: true }}
+                shallowRouting
+              />
             </body>
           </AuthContextProvider>
         </ThemeContextProvider>
       </QueryClientProvider>
-      {/* </ErrorBoundary> */}
     </html>
   );
 }
