@@ -10,8 +10,12 @@ import { useRouter } from "next/navigation";
 
 export const useGetAllWords = () => {
   const category = useCategory();
+  const { user } = useAuth();
   return useQuery(["WORD_LIST", category], async () => {
-    const { data } = await client.post("/words", { category });
+    const { data } = await client.post("/words", {
+      category,
+      user: user.email,
+    });
     if (!data.status) {
       Swal.fire({
         icon: "error",

@@ -7,6 +7,8 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { auth } from "@/libs/firebase";
+import { usePathname, useRouter } from "next/navigation";
+import ROUTES_OBJECT from "@/utils/RoutesObject";
 
 export const AuthContext = createContext<{
   googleSignIn: () => void;
@@ -16,6 +18,8 @@ export const AuthContext = createContext<{
 }>({ googleSignIn: () => {}, logOut: () => {}, user: {}, userLoading: true });
 
 const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname();
+  const router = useRouter();
   const [user, setUser] = useState<any>({});
   const [userLoading, setUserLoading] = useState<boolean>(true);
 
@@ -39,6 +43,12 @@ const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
       unsubscribe();
     };
   }, []);
+
+  useEffect(() => {
+    if (!userLoading && !user && pathname !== ROUTES_OBJECT.home) {
+      router.push(ROUTES_OBJECT.home);
+    }
+  }, [pathname, user, userLoading]);
 
   return (
     <AuthContext.Provider value={{ googleSignIn, logOut, user, userLoading }}>
