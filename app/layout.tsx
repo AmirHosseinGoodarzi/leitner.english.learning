@@ -8,6 +8,7 @@ import AuthContextProvider from "@/contexts/authContext";
 import { Toaster } from "react-hot-toast";
 import Navbar from "@/components/navbar";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
+import SidebarContextProvider from "@/contexts/sidebarContext";
 
 export const metadata: Metadata = {
   title: "Learn English",
@@ -31,17 +32,19 @@ export default function RootLayout({
       <QueryClientProvider client={queryClient}>
         <ThemeContextProvider>
           <AuthContextProvider>
-            <body>
-              <Navbar />
-              {children}
-              <Toaster position="top-center" />
-              <ProgressBar
-                height="4px"
-                color="#38BDF8"
-                options={{ showSpinner: true }}
-                shallowRouting
-              />
-            </body>
+            <SidebarContextProvider>
+              <body>
+                <Navbar />
+                {children}
+                <Toaster position="top-center" />
+                <ProgressBar
+                  height="4px"
+                  color="#38BDF8"
+                  options={{ showSpinner: true }}
+                  shallowRouting
+                />
+              </body>
+            </SidebarContextProvider>
           </AuthContextProvider>
         </ThemeContextProvider>
       </QueryClientProvider>

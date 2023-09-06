@@ -1,12 +1,28 @@
-"use client"
+"use client";
+
 import sidebarItems from "@/data/sidebarItems";
+import useSidebar from "@/hooks/useSidebar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { XLg } from "react-bootstrap-icons";
 
 const Sidebar = () => {
   const pathname = usePathname();
+  const { isOpen, setIsOpen } = useSidebar();
   return (
-    <div className="hidden lg:block fixed z-20 inset-0 top-[8rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19rem] pb-10 pl-8 pr-6 overflow-y-auto">
+    <div
+      className={`fixed z-50 inset-0 top-0 lg:top-[8rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19rem] pb-10 pl-8 pr-6 overflow-y-auto bg-slate-200 dark:bg-slate-800 lg:bg-transparent lg:dark:bg-transparent pt-16 lg:pt-0 transition-all ${
+        isOpen ? "translate-x-0" : "-translate-x-full"
+      } lg:translate-x-0`}
+    >
+      <button
+        className="lg:hidden absolute top-5 right-5 hover:text-red-500"
+        onClick={() => {
+          setIsOpen(false);
+        }}
+      >
+        <XLg className="text-2xl"/>
+      </button>
       <nav id="nav" className="lg:text-sm lg:leading-6 relative">
         <ul>
           {sidebarItems["mainPart"].map((item, index) => {

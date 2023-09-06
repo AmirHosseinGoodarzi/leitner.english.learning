@@ -1,16 +1,18 @@
 import ThemeSelector from "./themeSelector";
 import useAuth from "@/hooks/useTheme";
-import { BoxArrowRight } from "react-bootstrap-icons";
+import { BoxArrowRight, List } from "react-bootstrap-icons";
 import { THEMES } from "@/utils/enums";
 import ROUTES_OBJECT from "@/utils/RoutesObject";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import useTheme from "@/hooks/useTheme";
 import Image from "next/image";
+import useSidebar from "@/hooks/useSidebar";
 
 const Navbar = () => {
   const { logOut, user } = useAuth();
   const { currentTheme } = useTheme();
+  const { setIsOpen } = useSidebar();
   const pathname = usePathname();
   const signOutHandler = async () => {
     try {
@@ -21,12 +23,12 @@ const Navbar = () => {
   };
   const locationStyles =
     pathname !== ROUTES_OBJECT.home
-      ? "lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06]"
+      ? "border-b border-slate-900/10 dark:border-slate-50/[0.06]"
       : "";
 
   return (
     <div
-      className={`w-full fixed top-0 px-5 py-3 z-50 backdrop-blur bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent ${locationStyles}`}
+      className={`w-full fixed top-0 px-3 lg:px-5 py-3 z-50 backdrop-blur bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent ${locationStyles}`}
     >
       <div className="w-full mx-auto max-w-5xl flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200">
         <Link href={ROUTES_OBJECT.home}>
@@ -80,6 +82,18 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      {pathname !== ROUTES_OBJECT.home ? (
+        <div className="lg:hidden mt-3 px-3 pt-2 border-t border-slate-900/10 dark:border-slate-50/[0.06] flex items-center justify-start">
+          <List
+            className="text-3xl cursor-pointer text-slate-700 dark:text-slate-200"
+            onClick={() => {
+              setIsOpen(true);
+            }}
+          />
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
