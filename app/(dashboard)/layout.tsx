@@ -31,7 +31,7 @@ export default function DashboardLayout({
         <div className="min-h-screen max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8">
           <Sidebar />
           <div className="lg:pl-[19.5rem] pt-20">
-            <main className="max-w-3xl mx-auto relative z-20 mt-20 lg:pt-10 xl:max-w-none">
+            <main className="max-w-3xl mx-auto relative z-20 mt-20 lg:mt-10 xl:max-w-none">
               {children}
             </main>
           </div>
