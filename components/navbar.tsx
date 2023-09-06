@@ -1,4 +1,4 @@
-import ThemeSelector from "../themeSelector";
+import ThemeSelector from "./themeSelector";
 import useAuth from "@/hooks/useTheme";
 import { BoxArrowRight } from "react-bootstrap-icons";
 import { THEMES } from "@/utils/enums";

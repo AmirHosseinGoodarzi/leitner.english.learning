@@ -6,6 +6,7 @@ import ROUTES_OBJECT from "@/utils/RoutesObject";
 import { useRouter } from "next/navigation";
 import { Plus } from "react-bootstrap-icons";
 import { useForm } from "react-hook-form";
+import Button from "@/components/button";
 
 export default function FormContainer({
   initialFormValues,
@@ -68,15 +69,13 @@ export default function FormContainer({
         </label>
       </div>
       <div className="sm:col-span-2 mt-2.5 flex items-center justify-center">
-        <button
+        <Button
           onClick={formSubmiteHandler}
-          className="bg-slate-900 dark:bg-slate-100 py-3 px-6 rounded-md text-white dark:text-slate-700"
+          icon={<Plus className="text-2xl" />}
+          loading={addEditWordLoading}
         >
-          <div className="flex items-center justify-center gap-1">
-            <span>Add new card</span>
-            <Plus className="text-2xl" />
-          </div>
-        </button>
+          Add new card
+        </Button>
       </div>
     </div>
   );

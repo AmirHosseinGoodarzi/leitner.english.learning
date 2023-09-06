@@ -1,3 +1,4 @@
+import Button from "@/components/button";
 import ROUTES_OBJECT from "@/utils/RoutesObject";
 import Link from "next/link";
 
@@ -14,8 +15,7 @@ export default function NotFound() {
         </p>
         <div className="mt-10 flex items-center justify-center">
           <Link href={ROUTES_OBJECT.home}>
-            {/* <Button icon="<-">Go back home</Button> */}
-            Go back home
+            <Button icon="<-">Go back home</Button>
           </Link>
         </div>
       </div>

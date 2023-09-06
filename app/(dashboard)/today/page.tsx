@@ -1,9 +1,12 @@
 "use client";
 
+import Button from "@/components/button";
 import PageHeader from "@/components/pageHeader";
 import { useGetAllWords, useMoveWord } from "@/services/Words";
+import { ButtonTypes } from "@/utils/enums";
 import Image from "next/image";
 import { useState } from "react";
+import { Check2All } from "react-bootstrap-icons";
 
 export default function Today() {
   const [activedCardIndex, setActivedCardIndex] = useState(0);
@@ -46,9 +49,9 @@ export default function Today() {
           <br />
           <br />
           <footer className="lg:h-16 flex items-center justify-center gap-5 flex-wrap-reverse sticky bottom-0 w-full rounded-md p-2">
-            {/* <Button
-              type={ButtonTypes.Outline}
-              isLoading={moveWordLoading}
+            <Button
+              variant={ButtonTypes.Outline}
+              loading={moveWordLoading}
               onClick={() => {
                 moveWordHandler(false);
               }}
@@ -56,23 +59,23 @@ export default function Today() {
               I don't know !
             </Button>
             <Button
-              type={ButtonTypes.Fill}
-              icon={<Completed className="text-2xl" />}
-              isLoading={moveWordLoading}
+              variant={ButtonTypes.Fill}
+              icon={<Check2All className="text-2xl" />}
+              loading={moveWordLoading}
               onClick={() => {
                 moveWordHandler(true);
               }}
             >
               I know this
-            </Button> */}
+            </Button>
           </footer>
         </>
       ) : (
         <div>
           <Image
             src="./assets/images/empty.svg"
-            width={300}
-            height={300}
+            width={250}
+            height={250}
             alt="..."
             className="mx-auto mb-5"
           />
