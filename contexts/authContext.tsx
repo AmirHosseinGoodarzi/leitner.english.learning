@@ -50,10 +50,6 @@ const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
     }
   }, [pathname, user, userLoading]);
 
-  useEffect(() => {
-    console.log({ userLoading });
-  }, [userLoading]);
-
   return (
     <AuthContext.Provider value={{ googleSignIn, logOut, user, userLoading }}>
       {children}

@@ -30,6 +30,8 @@ export default function RootLayout({
           name="description"
           content="Rapidly Learning English with Leitner's method."
         />
+        <link rel="manifest" href="./manifest.webmanifest" />
+        <meta name="theme-color" content="#0f172a" />
       </head>
       <QueryClientProvider client={queryClient}>
         <ThemeContextProvider>

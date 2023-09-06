@@ -8,7 +8,7 @@ import { CategoryArray, CategoryEnum } from "@/utils/enums";
 
 export default function View() {
   const { data: viewBoxData, isLoading: viewBoxLoading } = useView();
-  console.log({ viewBoxData });
+
   return (
     <div className="relative pb-10">
       <PageHeader
