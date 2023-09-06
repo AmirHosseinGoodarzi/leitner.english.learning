@@ -29,15 +29,15 @@ const Navbar = () => {
             <Image
               src="/assets/images/LogoW.png"
               alt="Logo"
-              width={64}
-              height={46}
+              width={50}
+              height={50}
             />
           ) : (
             <Image
               src="/assets/images/LogoB.png"
               alt="Logo"
-              width={64}
-              height={46}
+              width={50}
+              height={50}
             />
           )}
         </Link>
