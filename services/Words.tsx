@@ -53,15 +53,16 @@ export const useRebuildWords = () => {
     async () => await client.post("/words/rebuild", { user: user.email }),
     {
       onSuccess: ({ data }) => {
-        if (!data.status) {
+        if (data.status) {
+          queryClient.invalidateQueries(["WORD_LIST"]);
+          localStorage.setItem("rebuildDateTime", new Date().toISOString());
+        } else {
           Swal.fire({
             icon: "error",
             title: "error",
             text: data.message,
           });
-          return;
         }
-        queryClient.invalidateQueries(["WORD_LIST"]);
       },
     }
   );

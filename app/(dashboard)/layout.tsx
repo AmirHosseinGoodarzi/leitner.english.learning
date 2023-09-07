@@ -1,7 +1,9 @@
 "use client";
 
+import { useEffect } from "react";
 import Sidebar from "@/components/sidebar";
 import useAuth from "@/hooks/useAuth";
+import { useRebuildWords } from "@/services/Words";
 import { CircleLoader } from "react-spinners";
 
 export default function DashboardLayout({
@@ -10,6 +12,24 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   const { userLoading } = useAuth();
+  const { mutate: rebuildWords, isLoading: rebuildWordsLoading } =
+    useRebuildWords();
+
+  useEffect(() => {
+    if (!userLoading) {
+      const rebuildDateTime = localStorage.getItem("rebuildDateTime");
+      if (!rebuildDateTime) {
+        rebuildWords();
+      } else {
+        const rebuildDS = rebuildDateTime.split("T")[0];
+        const todayDS = new Date().toISOString().split("T")[0];
+        if (rebuildDS !== todayDS) {
+          rebuildWords();
+        }
+      }
+    }
+  }, [userLoading]);
+
   return (
     <div className="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
       <div className="absolute z-20 top-0 inset-x-0 flex justify-center overflow-hidden pointer-events-none">
@@ -32,10 +52,14 @@ export default function DashboardLayout({
           </picture>
         </div>
       </div>
-      {userLoading ? (
+      {userLoading || rebuildWordsLoading ? (
         <div className="fixed z-50 bg-white dark:bg-slate-800 w-full h-full flex flex-col gap-16 lg:gap-10 items-center justify-center p-10">
           <CircleLoader size={150} color="#38bdf8" />
-          <h1 className="text-2xl lg:text-xl text-slate-800 dark:text-slate-200 animate-pulse text-center">Getting user account information ...</h1>
+          <h1 className="text-2xl lg:text-xl text-slate-800 dark:text-slate-200 animate-pulse text-center">
+            {userLoading
+              ? "Getting user account information ..."
+              : "Rebuilding data structures ..."}
+          </h1>
         </div>
       ) : (
         <div className="overflow-hidden">
