@@ -14,7 +14,7 @@ export default function View() {
       <PageHeader
         hint="Free view"
         title="Review your box at a glance"
-        description="Click on each part too see the details"
+        description="Click on each part to see the details"
       />
       <br />
       <br />
