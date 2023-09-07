@@ -57,3 +57,9 @@ html.dark {
   }
 }
 
+.swiper {
+  @apply w-[240px] h-[320px] select-none;
+  .swiper-slide {
+    @apply flex text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-700 items-center justify-center rounded-2xl p-3;
+  }
+}

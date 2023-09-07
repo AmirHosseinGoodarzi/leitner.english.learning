@@ -159,8 +159,8 @@ export default {
       name: "How Leitner works",
     },
     {
-      to: "",
-      name: "Grammer <small>(Coming soon ... )</small>",
+      to: ROUTES_OBJECT.grammar,
+      name: "Grammar",
     },
     {
       to: "",
