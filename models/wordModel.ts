@@ -35,11 +35,14 @@ const wordSchema = new mongoose.Schema({
   },
   movedTo: {
     type: Date,
-    default: Date.now(),
+    default: () => {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      return tomorrow;
+    },
   },
 });
 
-const wordModel =
-  mongoose.models.Word || mongoose.model("Word", wordSchema);
+const wordModel = mongoose.models.Word || mongoose.model("Word", wordSchema);
 
 export default wordModel;
