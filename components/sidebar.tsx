@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import sidebarItems from "@/data/sidebarItems";
 import useSidebar from "@/hooks/useSidebar";
 import Link from "next/link";
@@ -25,6 +25,10 @@ const Sidebar = () => {
       console.log(error);
     }
   };
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
   return (
     <div
       ref={sidebarRef}
