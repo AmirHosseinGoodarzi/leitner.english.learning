@@ -28,6 +28,7 @@ body {
 html.dark {
   color-scheme: dark;
 }
+
 .form_wrapper {
   > div {
     @apply relative;
@@ -56,10 +57,25 @@ html.dark {
     resize: none;
   }
 }
-
 .swiper {
   @apply w-[240px] h-[320px] select-none;
   .swiper-slide {
     @apply flex text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-700 items-center justify-center rounded-2xl p-3;
+  }
+}
+.custom_table {
+  @apply overflow-x-auto;
+  table {
+    @apply w-full lg:w-4/5 mx-auto rounded-lg text-center shadow-lg;
+    thead tr {
+      @apply text-slate-700 dark:text-slate-200 bg-slate-200 dark:bg-slate-700;
+    }
+    th,
+    td {
+      @apply text-slate-700 dark:text-slate-200 p-2 whitespace-nowrap;
+    }
+    td {
+      @apply border border-slate-200 dark:border-slate-700;
+    }
   }
 }
