@@ -39,7 +39,7 @@ export default {
         <Example>I am a programmer. </Example>
         <br />
         <Rule>➖ Subject + to be + not + ...</Rule>
-        <Example>You're not a teacher.</Example>
+        <Example>You’re not a teacher.</Example>
         <br />
         <Rule>❓(Yes-No) to be + subject + ... ? </Rule>
         <Example>Are you crazy? </Example>
@@ -53,7 +53,7 @@ export default {
         <Example>she watches tv. </Example>
         <br />
         <Rule>➖ Subject + do/does + not + infinitive + ... .</Rule>
-        <Example>She doesn't Care about weather. </Example>
+        <Example>She doesn’t Care about weather. </Example>
         <br />
         <Rule>❓(Yes-No) Do/Does + Subject + infinitive + … ?</Rule>
         <Example>Does he play video games?</Example>
@@ -118,7 +118,7 @@ export default {
         <Example> I was sick yesterday.</Example>
         <br />
         <Rule>➖ Subject + was/were + not + …. .</Rule>
-        <Example> She wasn't here last week.</Example>
+        <Example> She wasn’t here last week.</Example>
         <br />
         <Rule>❓(Yes-No) was/were + Subject + …. ? </Rule>
         <Example> Was the weather good when you were on holiday? </Example>
@@ -132,7 +132,7 @@ export default {
         <Example> They Came late last night.</Example>
         <br />
         <Rule>➖ Subject + did + not + infinitive + ... ? </Rule>
-        <Example> I didn't drive a car</Example>
+        <Example> I didn’t drive a car</Example>
         <br />
         <Rule>❓(Yes-No) Did + subject + infinitive + ... ? </Rule>
         <Example> Did he play video games last year?</Example>
@@ -151,7 +151,7 @@ export default {
       </Example>
       <Example>We were standing at a bus stop.</Example>
       <Rule>➖ Subject + was/were + not + verb + ing </Rule>
-      <Example>My father wasn't waiting for me when I got there.</Example>
+      <Example>My father wasn’t waiting for me when I got there.</Example>
       <Rule>❓Question word + was/were + subject + verb + ing + … ? </Rule>
       <Example>What were they doing ?</Example>
     </div>
@@ -160,14 +160,14 @@ export default {
     <div>
       <Rule>➕ Subject + have/has + past participle verb form </Rule>
       <Example>
-        I've been in the USA. ( I don't know when or I don't care )
+        I’ve been in the USA. ( I don’t know when or I don’t care )
       </Example>
-      <Example>She's worked for many famous companies.</Example>
+      <Example>She’s worked for many famous companies.</Example>
       <Rule>➖ Subject + have/has + not + p.p + …… </Rule>
-      <Example>They haven't been in the ceremony.</Example>
+      <Example>They haven’t been in the ceremony.</Example>
       <Rule>✅ We can use ( never ) in negatives</Rule>
       <Example>
-        I haven't given my keys to him = I've never given my keys to him.
+        I haven’t given my keys to him = I’ve never given my keys to him.
       </Example>
       <Rule>❓(Yes-No) Have/Has + Subject + ever(optional)+ p.p + ...</Rule>
       <Example>Have you ever been to a concert?</Example>
@@ -218,7 +218,7 @@ export default {
       <Example>He’s already had an operation.</Example>
       <br />
       <Rule>
-        We use yet to say something hasn't happened, but we think it will happen
+        We use yet to say something hasn’t happened, but we think it will happen
         in future:
       </Rule>
       <Example>I haven’t been to visit him yet.</Example>
@@ -230,7 +230,7 @@ export default {
       <Rule>➕ Subject + will / might + infinitive + ….</Rule>
       <Rule>✅ We use might if we want to say will possibly.</Rule>
       <Example>I think our planet will be crowded. </Example>
-      <Example>I'll do it tomorrow. </Example>
+      <Example>I’ll do it tomorrow. </Example>
       <br />
       <Rule>➖ Subject + will / might + not + infinitive</Rule>
       <Example>It wont ( = will not ) be easy </Example>
@@ -245,10 +245,10 @@ export default {
   "/be-going-to": (
     <div>
       <Rule>➕ Subject + to be + going to + infinitive.</Rule>
-      <Example>We're going to drive across the USA.</Example>
+      <Example>We’re going to drive across the USA.</Example>
       <br />
       <Rule>➖ Subject + to be + not + going to + infinitive.</Rule>
-      <Example>I'm not going to buy pizza tomorrow.</Example>
+      <Example>I’m not going to buy pizza tomorrow.</Example>
       <br />
       <Rule>❓(Yes-No) to be + Subject + going to + infinitive </Rule>
       <Example>Are you going to live abroad?</Example>
@@ -263,12 +263,12 @@ export default {
         <Accordion title="Hopes , Plans , Ambitions">
           <Rule>We are planning .... to infinitive </Rule>
           <Example>We’re planning to travel </Example>
-          <Rule>I'm hoping .... to infinitive </Rule>
+          <Rule>I’m hoping .... to infinitive </Rule>
           <Rule>I want .... to infinitive </Rule>
-          <Rule>I'd like .... to infinitive </Rule>
-          <Rule>I'm thinking of .... verb + ing</Rule>
-          <Example>I'm thinking of swimming</Example>
-          <Rule>I'm looking forward to .... verb + ing</Rule>
+          <Rule>I’d like .... to infinitive </Rule>
+          <Rule>I’m thinking of .... verb + ing</Rule>
+          <Example>I’m thinking of swimming</Example>
+          <Rule>I’m looking forward to .... verb + ing</Rule>
         </Accordion>
       </div>
     </div>
@@ -276,7 +276,7 @@ export default {
   "/present_continuous_for_future": (
     <div>
       <Rule>
-        If you don't knwo or forget the present continuous rules,{" "}
+        If you don’t knwo or forget the present continuous rules,{" "}
         <Link
           href={ROUTES_OBJECT.grammar + "/present_continuous"}
           className="text-sky-500"
@@ -285,9 +285,9 @@ export default {
         </Link>
       </Rule>
       <Rule>Here are some example:</Rule>
-      <Example>I'm driving a car tomorrow. (I’m sure about that.) </Example>
+      <Example>I’m driving a car tomorrow. (I’m sure about that.) </Example>
       <Example>
-        I'm losing my job next year because I want to live abroad.
+        I’m losing my job next year because I want to live abroad.
       </Example>
       <Example>Are you having any plans for next month? </Example>
     </div>
@@ -300,15 +300,15 @@ export default {
         <Example>She has to stay there. </Example>
         <br />
         <Rule>➖ Subject + do / does + not + have to + infinitive </Rule>
-        <Example>I don't have to pay for it.</Example>
-        <Example>He doesn't have to clean the room.</Example>
+        <Example>I don’t have to pay for it.</Example>
+        <Example>He doesn’t have to clean the room.</Example>
       </Accordion>
       <Accordion title="Past">
         <Rule>➕ Subject + had to + infinitive </Rule>
         <Example>She had to do that for her parents.</Example>
         <br />
         <Rule>➖ Subject + did + not + had to + infinitive </Rule>
-        <Example>They didn't have to touch that.</Example>
+        <Example>They didn’t have to touch that.</Example>
       </Accordion>
     </div>
   ),
@@ -376,7 +376,7 @@ export default {
       <Example>Is there any T-shirt?</Example>
       <br />
       <Rule>✅We can use no to mean not any.</Rule>
-      <Example>There is no coffee = There isn't any coffee</Example>
+      <Example>There is no coffee = There isn’t any coffee</Example>
       <br />
       <Rule>Other quantifiers</Rule>
       <div className="custom_table">
@@ -420,7 +420,7 @@ export default {
       <br />
       Some examples:
       <Example>There are a few towels. </Example>
-      <Example>There aren't many toothbrushes. </Example>
+      <Example>There aren’t many toothbrushes. </Example>
       <Example>There is a little tea. </Example>
       <Example>There isn’t much chewing gum. </Example>
       <Example>How many T-shirts are there? </Example>
@@ -508,8 +508,8 @@ export default {
       <Example>You must improve your English.</Example>
       <br />
       <Rule>➖ Subject + should/must + not + infinitive + ….</Rule>
-      <Example>You shouldn't leave after dinner immediately.</Example>
-      <Example>You mustn't sleep here.</Example>
+      <Example>You shouldn’t leave after dinner immediately.</Example>
+      <Example>You mustn’t sleep here.</Example>
       <br />
       <Rule>❓(Yes-No) should/must + Subject + infinitive + …. ?</Rule>
       <Example>Should I bring something to eat? </Example>
@@ -657,8 +657,8 @@ export default {
     <div>
       <Rule>➕ Subject + used to + infinitive + ….</Rule>
       <Example>The people used to carry cash 10 years ago </Example>
-      <Rule>➖ Subject + didn't + use to + infinitive + ….</Rule>
-      <Example>The people didn't use to play video games</Example>
+      <Rule>➖ Subject + didn’t + use to + infinitive + ….</Rule>
+      <Example>The people didn’t use to play video games</Example>
       <Rule>❓(Yes-No) Did + subject + use to + infinitive + …. ?</Rule>
       <Example>Did you use to have long hair?</Example>
       <Rule>❓(WH) WH + Did + subject + use to + infinitive + …. ?</Rule>
@@ -688,7 +688,7 @@ export default {
         </Accordion>
         <Accordion title="Non-Defining">
           <Rule>
-            We can remove one of the clauses and the meaning won't change
+            We can remove one of the clauses and the meaning won’t change
           </Rule>
           <Example>
             The boy, who/that is looking at you, is my classmate.
@@ -710,7 +710,7 @@ export default {
         </div>
       </Rule>
       <Example>If I’m late again, I’ll lose my job</Example>
-      <Example>If we don’t leave soon, We won't get there in time</Example>
+      <Example>If we don’t leave soon, We won’t get there in time</Example>
       <br />
       <Rule>
         ✅Instead of If we can use some other words. ( when, as soon as ,
@@ -853,6 +853,30 @@ export default {
       <Example>You are a programmer, aren’t you?</Example>
       <Example>She’s been in the USA, Hasn’t she?</Example>
       <Example>He wouldn’t like to buy a house. Would he? </Example>
+    </div>
+  ),
+  "/modal-of-posibility": (
+    <div>
+      <Rule>Subject + ( Possibility phrase ) + be + ....</Rule>
+      <Rule>Subject + ( Possibility phrase ) + infinitive + ....</Rule>
+      <br />
+      <Rule>
+        <ul className="text-black dark:text-white pl-5 lg:pl-10 list-decimal">
+          <li>Must {"-->"} 100%</li>
+          <li>Could {"-->"} 80%</li>
+          <li>Might {"-->"} 50%</li>
+          <li>Can’t {"-->"} 0%</li>
+        </ul>
+      </Rule>
+      <Example>
+        It <b>might</b> be a snake.
+      </Example>
+      <Example>
+        You <b>can’t</b> be serious.
+      </Example>
+      <Example>
+        She <b>must</b> feel really tired.
+      </Example>
     </div>
   ),
   "/causative": (
