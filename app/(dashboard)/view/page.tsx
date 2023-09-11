@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import PageHeader from "@/components/pageHeader";
 import styles from "./leitnerView.module.scss";
 import { useView } from "@/services/Words";
@@ -8,6 +9,17 @@ import { CategoryArray, CategoryEnum } from "@/utils/enums";
 
 export default function View() {
   const { data: viewBoxData, isLoading: viewBoxLoading } = useView();
+  const [totalCount, setTotalCount] = useState(0);
+
+  useEffect(() => {
+    if (viewBoxData) {
+      let sum = 0;
+      viewBoxData.forEach((item: { _id: CategoryEnum; count: number }) => {
+        sum += item.count;
+      });
+      setTotalCount(sum);
+    }
+  }, [viewBoxData]);
 
   return (
     <div className="relative pb-10">
@@ -16,6 +28,11 @@ export default function View() {
         title="Review your box at a glance"
         description="Click on each part to see the details"
       />
+      <p className="text-lg">
+        Today you’ll have <b className="text-white">{totalCount}</b> words for
+        review
+      </p>
+      <br />
       <br />
       <br />
       {viewBoxLoading ? (
