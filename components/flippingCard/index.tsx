@@ -4,7 +4,13 @@ import { WordType } from "@/utils/types";
 import ROUTES_OBJECT from "@/utils/RoutesObject";
 import { useSpeechSynthesis } from "react-speech-kit";
 import Link from "next/link";
-import { Pen, VolumeMuteFill, VolumeUpFill } from "react-bootstrap-icons";
+import {
+  Files,
+  Pen,
+  VolumeMuteFill,
+  VolumeUpFill,
+} from "react-bootstrap-icons";
+import toast from "react-hot-toast";
 
 const FlippingCard = ({ word }: { word: WordType }) => {
   const [cardFlipped, setCardFlipped] = useState(false);
@@ -19,6 +25,17 @@ const FlippingCard = ({ word }: { word: WordType }) => {
       // 105 - 106 - 107 - 108 - 109`
       speak({ text: word.front, voice: voices[107] });
     }
+  };
+  const copyHandler = () => {
+    navigator.clipboard.writeText(word.front).then(
+      function () {
+        toast.success("Copied to clipboard");
+      },
+      function (err) {
+        console.error("Async: Could not copy text:", err);
+        toast.error("Error in copy word !");
+      }
+    );
   };
 
   return (
@@ -37,6 +54,15 @@ const FlippingCard = ({ word }: { word: WordType }) => {
       >
         {word.front}
         <div className="absolute top-2 right-2 flex items-center justify-center gap-2">
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              copyHandler();
+            }}
+            className="rounded-full transition-all text-xl p-2 hover:bg-gray-300"
+          >
+            <Files />
+          </button>
           <Link href={ROUTES_OBJECT.configCard + "/" + word._id}>
             <button
               onClick={(e) => {
