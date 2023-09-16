@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import connectDB from "@/libs/mongodb";
 import WordModel from "@/models/wordModel";
 import { CategoryEnum } from "@/utils/enums";
+import shuffleArray from "@/utils/shuffleArray";
 
 export async function POST(req: Request) {
   try {
@@ -29,13 +30,14 @@ export async function POST(req: Request) {
             { user },
             {
               movedTo: { $gte: startToday, $lt: startTomorrow },
-            }
+            },
           ],
         };
-        const doc = await WordModel.find(filterBody);
+        const docs = await WordModel.find(filterBody);
+        const data = shuffleArray(docs);
         return NextResponse.json({
           status: true,
-          data: doc,
+          data,
         });
       }
     }
