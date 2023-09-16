@@ -29,8 +29,7 @@ export async function POST(req: Request) {
             { user },
             {
               movedTo: { $gte: startToday, $lt: startTomorrow },
-            },
-            { category },
+            }
           ],
         };
         const doc = await WordModel.find(filterBody);
