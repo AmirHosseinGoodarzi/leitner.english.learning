@@ -2,15 +2,8 @@
 
 import { Example, Rule } from "@/components/grammerContents";
 import PageHeader from "@/components/pageHeader";
-import { useRouter } from "next/navigation";
 
-export default function GrammarContent({
-  params,
-}: {
-  params: { link: string };
-}) {
-  const router = useRouter();
-
+export default function GrammarContent() {
   return (
     <div className="relative pb-10">
       <PageHeader
@@ -115,7 +108,7 @@ export default function GrammarContent({
           <span className="bg-sky-500 rounded-md absolute p-2 text-sm -rotate-45">
             Persian
           </span>
-          <div className="ml-20">Wolf's saying hi isn't without greed. 🐺</div>
+          <div className="ml-20">Wolf’s saying hi isn’t without greed. 🐺</div>
         </Rule>
         <br />
         <Example>The grapes are sour.</Example>
@@ -123,7 +116,7 @@ export default function GrammarContent({
           <span className="bg-sky-500 rounded-md absolute p-2 text-sm -rotate-45">
             Persian
           </span>
-          <div className="ml-20">The cat's hand can't touch the meat. 🐈</div>
+          <div className="ml-20">The cat’s hand can’t touch the meat. 🐈</div>
         </Rule>
         <br />
         <Example>My Cake is dough !</Example>
@@ -131,13 +124,13 @@ export default function GrammarContent({
           <span className="bg-sky-500 rounded-md absolute p-2 text-sm -rotate-45">
             Persian
           </span>
-          <div className="ml-20">My hand doesn't have salt. 🧂</div>
+          <div className="ml-20">My hand doesn’t have salt. 🧂</div>
         </Rule>
         <br />
         <Example>Time flies.</Example>
         <Example>Time is money.</Example>
         <Example>Better late than never.</Example>
-        <Example>Don't shed crocodile tears.</Example>
+        <Example>Don’t shed crocodile tears.</Example>
         <Example>If you say so.</Example>
         <Example>No sweat !</Example>
         <Rule>Confirm something... = Aight</Rule>
@@ -162,7 +155,7 @@ export default function GrammarContent({
           <span className="bg-sky-500 rounded-md absolute p-2 text-sm -rotate-45">
             Persian
           </span>
-          <div className="ml-20">What's done is done!</div>
+          <div className="ml-20">What’s done is done!</div>
         </Rule>
         <br />
         <Example>Feel in my bones.</Example>
@@ -199,7 +192,7 @@ export default function GrammarContent({
           </span>
         </Example>
         <br />
-        <Example>Let's call it a day</Example>
+        <Example>Let’s call it a day</Example>
         <Rule>Decide or agree to stop doing something</Rule>
         <br />
         <Example>
