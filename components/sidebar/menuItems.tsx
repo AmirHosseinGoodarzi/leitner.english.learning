@@ -167,8 +167,8 @@ export default {
       name: "Speaking <small>(Coming soon ... )</small>",
     },
     {
-      to: "",
-      name: "Idioms <small>(Coming soon ... )</small>",
+      to: ROUTES_OBJECT.idioms,
+      name: "Idioms",
     },
   ],
 };

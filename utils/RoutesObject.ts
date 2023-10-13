@@ -1,4 +1,4 @@
-const ROUTES_OBJECT = Object.freeze({
+export default Object.freeze({
   home: "/",
   today: "/today",
   view: "/view",
@@ -6,5 +6,5 @@ const ROUTES_OBJECT = Object.freeze({
   configCard: "/configCard",
   how_it_works: "/how-it-works",
   grammar: "/grammar",
+  idioms: "/idioms",
 });
-export default ROUTES_OBJECT;

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import sidebarItems from "@/data/sidebarItems";
+import sidebarItems from "./menuItems";
 import useSidebar from "@/hooks/useSidebar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

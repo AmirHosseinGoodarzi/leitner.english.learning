@@ -29,8 +29,7 @@ export default function View() {
         description="Click on each part to see the details"
       />
       <p className="text-lg">
-        Today you’ll have <b className="text-white">{totalCount}</b> words for
-        review
+        You have <b className="text-white">{totalCount}</b> words in total.
       </p>
       <br />
       <br />
