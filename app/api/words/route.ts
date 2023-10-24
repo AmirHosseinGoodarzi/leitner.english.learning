@@ -31,6 +31,11 @@ export async function POST(req: Request) {
             {
               movedTo: { $gte: startToday, $lt: startTomorrow },
             },
+            {
+              category: {
+                $ne: CategoryEnum.COMPLETED,
+              },
+            },
           ],
         };
         const docs = await WordModel.find(filterBody);
