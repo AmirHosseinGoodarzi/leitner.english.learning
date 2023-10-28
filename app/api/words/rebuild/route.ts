@@ -13,7 +13,6 @@ export async function POST(req: Request) {
       {
         $and: [
           { user },
-          { category: { $ne: CategoryEnum.ONE } },
           { category: { $ne: CategoryEnum.COMPLETED } },
           { movedTo: { $lt: startToday } },
         ],
