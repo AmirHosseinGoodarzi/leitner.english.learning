@@ -896,4 +896,74 @@ export default {
       <Example>He got his washing machine fixed.</Example>
     </div>
   ),
+  "/order-of-adjectives": (
+    <div>
+      <Rule>Generally, the adjective order in English is:</Rule>
+      <ul className="text-black dark:text-white pl-5 lg:pl-10 list-decimal">
+        <li>Quantity or number</li>
+        <li>Quality or opinion</li>
+        <li>Size</li>
+        <li>Age</li>
+        <li>Shape</li>
+        <li>
+          Proper adjective (often nationality, other place of origin, or
+          material)
+        </li>
+      </ul>
+      <br />
+      <br />
+      <div className="custom_table">
+        <table>
+          <thead>
+            <tr>
+              <th>Determiner</th>
+              <th>Quantity or number</th>
+              <th>Quality or opinion</th>
+              <th>Size</th>
+              <th>Age</th>
+              <th>Shape</th>
+              <th>Color</th>
+              <th>Proper adjective</th>
+              <th>Noun</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A</td>
+              <td></td>
+              <td>beautiful</td>
+              <td></td>
+              <td>old</td>
+              <td></td>
+              <td></td>
+              <td>Italian</td>
+              <td>Car</td>
+            </tr>
+            <tr>
+              <td>The</td>
+              <td>three</td>
+              <td>beautiful</td>
+              <td>little</td>
+              <td></td>
+              <td></td>
+              <td>gold</td>
+              <td></td>
+              <td>plates</td>
+            </tr>
+            <tr>
+              <td>An</td>
+              <td></td>
+              <td>amazing</td>
+              <td></td>
+              <td></td>
+              <td>heart-shaped</td>
+              <td>red and white</td>
+              <td></td>
+              <td>sofa</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  ),
 };

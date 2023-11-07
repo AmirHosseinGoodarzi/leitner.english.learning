@@ -57,12 +57,13 @@ export default [
     title: "Future",
     href: "/be-going-to",
     subtitle: "Be going to",
-    description:"Talk about future plans"
+    description: "Talk about future plans",
   },
   {
     title: "Present Continuous for future",
     href: "/present_continuous_for_future",
-    description:"we can use present continuous to talk about our arrangements in the future."
+    description:
+      "we can use present continuous to talk about our arrangements in the future.",
   },
   {
     title: "Have to | Had to",
@@ -83,17 +84,19 @@ export default [
   {
     title: "Should | Must",
     href: "/should_must",
-    description:"We use “should” to give advice and We use “must” to give very strong advice."
+    description:
+      "We use “should” to give advice and We use “must” to give very strong advice.",
   },
   {
     title: "Infinitive of purpose",
     href: "/infinitive_of_purpose",
-    description:"To say why we do something"
+    description: "To say why we do something",
   },
   {
     title: "Too | Too much | Too many | (not) enough",
     href: "/too-enough",
-    description:"We use too, too many and too much to say something is more than we want"
+    description:
+      "We use too, too many and too much to say something is more than we want",
   },
   {
     title: "Passive",
@@ -111,41 +114,54 @@ export default [
   {
     title: "Used to",
     href: "/usedto",
-    description:"We use used to to talk about past habits and repeated actions."
+    description:
+      "We use used to to talk about past habits and repeated actions.",
   },
   {
     title: "Relative clauses",
     href: "/relative-clauses",
-    description:"We use Relative clauses to explain more about which person/thing/place that we are talking."
+    description:
+      "We use Relative clauses to explain more about which person/thing/place that we are talking.",
   },
   {
     title: "First Conditional",
     href: "/first-conditional",
-    description:"We use the first conditional to talk about the result of a possible event or situation in the future."
+    description:
+      "We use the first conditional to talk about the result of a possible event or situation in the future.",
   },
   {
     title: "Second Conditional",
     href: "/second-conditional",
-    description:"We use the second conditional to talk about unreal and imaginary situations."
+    description:
+      "We use the second conditional to talk about unreal and imaginary situations.",
   },
   {
     title: "Reported Speech",
     href: "/reported-speech",
-    description:"When we want to tell someone what another person said."
+    description: "When we want to tell someone what another person said.",
   },
   {
     title: "Tag Questions",
     href: "/tag-questions",
-    description:"Tag questions are short questions that we put at the end of sentences – particularly in spoken English. They are used to confirm or clarify information and often have a rising intonation"
+    description:
+      "Tag questions are short questions that we put at the end of sentences – particularly in spoken English. They are used to confirm or clarify information and often have a rising intonation",
   },
   {
     title: "Modal of posibility",
     href: "/modal-of-posibility",
-    description:"We use the modal of posibility to say that something is possible, but not certain or some thing is impossible:"
+    description:
+      "We use the modal of posibility to say that something is possible, but not certain or some thing is impossible:",
   },
   {
     title: "Causative",
     href: "/causative",
-    description:"We use a causative verb when we want to talk about something that someone else did for us or for another person. It means that the subject caused the action to happen, but didn't do it themselves. Maybe they paid, or asked, or persuaded the other person to do it."
+    description:
+      "We use a causative verb when we want to talk about something that someone else did for us or for another person. It means that the subject caused the action to happen, but didn't do it themselves. Maybe they paid, or asked, or persuaded the other person to do it.",
+  },
+  {
+    title: "Order of adjectives",
+    href: "/order-of-adjectives",
+    description:
+      "In many languages, adjectives denoting attributes usually occur in a specific order.",
   },
 ];
