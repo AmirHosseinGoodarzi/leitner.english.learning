@@ -6,5 +6,6 @@ export default Object.freeze({
   configCard: "/configCard",
   how_it_works: "/how-it-works",
   grammar: "/grammar",
+  speaking: "/speaking",
   idioms: "/idioms",
 });

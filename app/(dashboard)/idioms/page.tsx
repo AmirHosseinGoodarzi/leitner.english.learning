@@ -3,7 +3,7 @@
 import { Example, Rule } from "@/components/grammerContents";
 import PageHeader from "@/components/pageHeader";
 
-export default function GrammarContent() {
+export default function Idioms() {
   return (
     <div className="relative pb-10">
       <PageHeader
