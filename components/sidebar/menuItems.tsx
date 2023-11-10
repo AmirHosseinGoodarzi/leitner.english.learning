@@ -164,7 +164,7 @@ export const mainPart = [
     title: "Speaking",
     children: [
       {
-        to: ROUTES_OBJECT.speaking,
+        to: ROUTES_OBJECT.speaking + "/greetings",
         name: "Speaking",
         icon: (
           <div className="mr-4 rounded-md ring-1 ring-slate-900/5 shadow-sm group-hover:shadow group-hover:ring-slate-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-violet-200 dark:group-hover:bg-violet-500 dark:bg-slate-800 dark:highlight-white/5">
