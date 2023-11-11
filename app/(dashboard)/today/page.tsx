@@ -38,7 +38,13 @@ export default function Today() {
         title="Review your today words"
         description="Try to answer the meanings and pronunciation fast"
       />
-      <p className="text-lg">Today you’ll have <b className="text-white">{words?.length}</b> words for review</p>
+      <p className="text-lg">
+        Today you’ll have{" "}
+        <b className="text-white">
+          {words ? words.length - activedCardIndex : "---"}
+        </b>{" "}
+        words for review
+      </p>
       <br />
       <br />
       {wordsLoading ? (
