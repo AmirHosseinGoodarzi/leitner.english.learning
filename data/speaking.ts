@@ -36,16 +36,12 @@ export default [
     href: "/shopping",
   },
   {
-    title: "Time reading",
-    href: "/time",
-  },
-  {
     title: "Starting and Ending Conversations",
     href: "/start-end-conversations",
   },
   {
-    title: "Opnion",
-    href: "/opnion",
+    title: "Opinion",
+    href: "/opinion",
   },
   {
     title: "Agreeing",
@@ -62,10 +58,6 @@ export default [
   {
     title: "Fillers",
     href: "/fillers",
-  },
-  {
-    title: "Invitation and parties",
-    href: "/invitation",
   },
   {
     title: "British Money",
@@ -85,15 +77,15 @@ export default [
   },
   {
     title: "Going to WC",
-    href: "/brits-money",
+    href: "/wc",
   },
   {
     title: "Me too",
-    href: "/brits-money",
+    href: "/me-too",
   },
   {
     title: "On the food table",
-    href: "/brits-money",
+    href: "/food-table",
   },
   {
     title: "Others",

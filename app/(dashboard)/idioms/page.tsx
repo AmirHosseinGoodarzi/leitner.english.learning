@@ -235,6 +235,15 @@ export default function Idioms() {
           To do something that spoils someone’s plans and prevents them from
           succeeding
         </Rule>
+        <br />
+        <br />
+        <Example>Just my luck.</Example>
+        <Rule>
+          <span className="bg-sky-500 rounded-md absolute p-2 text-sm -rotate-45">
+            Persian
+          </span>
+          <div className="ml-20">Inam shans maye XD</div>
+        </Rule>
       </div>
     </div>
   );

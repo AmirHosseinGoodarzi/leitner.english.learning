@@ -97,7 +97,7 @@ export default function SpeakingContent({
       <PageHeader
         hint="Speaking"
         title={target.title}
-        description="Speaking practice to help you learn useful language for everyday communication. Situations include responding to news, meeting face-to-face and asking a favour."
+        description=""
       />
       <div className="text-gray-200 text-lg">{speakingContents[target.href as keyof typeof speakingContents]}</div>
       <br /><br />
