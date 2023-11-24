@@ -7,5 +7,6 @@ export default Object.freeze({
   how_it_works: "/how-it-works",
   grammar: "/grammar",
   speaking: "/speaking",
+  prononciation: "/prononciation",
   idioms: "/idioms",
 });
