@@ -55,7 +55,11 @@ export default {
   "/directions": (
     <div>
       <Rule>How to ask About addresses?</Rule>
-      <img src="/assets/images/direction.png" alt="direction"  className="mx-auto"/>
+      <img
+        src="/assets/images/direction.png"
+        alt="direction"
+        className="mx-auto"
+      />
       <br />
       <Example>
         <b>Could you show me the way to</b> Tehranpars?
@@ -68,19 +72,41 @@ export default {
   "/reactions": (
     <div>
       <p className="text-white font-bold text-3xl">➕ Show interest</p>
+      <p>I’m simulated to ....</p>
       <p>That seems cool.</p>
       <p>It appears to be great.</p>
-      <p>It's a wise choice.</p>
+      <p>It’s a wise choice.</p>
       <p>That’s the spirit.</p>
       <br />
       <p className="text-white font-bold text-3xl">➖</p>
       <p>That’s the wrong one.</p>
       <p>It’s not useful.</p>
       <br />
+      <p className="text-white font-bold text-3xl">🤢 Hate something</p>
+      <p>That’s bullied to me!</p>
+      <p>It riles me up!</p>
+      <br />
       <p className="text-white font-bold text-3xl">Nosey reactions</p>
       <p>It’s too rude !</p>
-      <p>Are you kidding me? </p>
+      <p>Are you kidding me?</p>
       <p>You can’t be serious !</p>
+      <br />
+    </div>
+  ),
+  "/feelings": (
+    <div>
+      <p className="text-white font-bold text-3xl">😊 Cool</p>
+      <p>I feel thrilled.</p>
+      <br />
+      <p className="text-white font-bold text-3xl">50 - 50</p>
+      <p>I feel neutral.</p>
+      <br />
+      <p className="text-white font-bold text-3xl">Angry</p>
+      <p>I lose my shit when ....</p>
+      <p>I get boild.</p>
+      <br />
+      <p className="text-white font-bold text-3xl">Sad</p>
+      <p>I feel devastated.</p>
       <br />
     </div>
   ),
@@ -220,6 +246,14 @@ export default {
       <p>I’m sorry. I don’t agree.</p>
       <p>No, definitely not.</p>
       <p>No, I don’t think so.</p>
+      <br />
+      <p className="text-white font-bold text-3xl">Care</p>
+      <p>I do overrate it.</p>
+      <p>It matters to me.</p>
+      <br />
+      <p className="text-white font-bold text-3xl">Do not care</p>
+      <p>I ain’t buying it.</p>
+      <p>I don’t give a damn to it. (informal)</p>
       <br />
       <p className="text-white font-bold text-3xl">Not sure</p>
       <p>If I’m not wrong, ….</p>

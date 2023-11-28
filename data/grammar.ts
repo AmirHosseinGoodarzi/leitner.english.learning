@@ -96,7 +96,13 @@ export default [
     title: "Too | Too much | Too many | (not) enough",
     href: "/too-enough",
     description:
-      "We use too, too many and too much to say something is more than we want",
+      "We use too, too many and too much to say something is more than we want.",
+  },
+  {
+    title: "So | Such",
+    href: "/so-such",
+    description:
+      "We use so to say something is cool and very satisfying.",
   },
   {
     title: "Passive",

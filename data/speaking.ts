@@ -12,6 +12,10 @@ export default [
     href: "/reactions",
   },
   {
+    title: "Feelings",
+    href: "/feelings",
+  },
+  {
     title: "According to me",
     href: "/according-to-me",
   },
@@ -58,10 +62,6 @@ export default [
   {
     title: "Fillers",
     href: "/fillers",
-  },
-  {
-    title: "British Money",
-    href: "/brits-money",
   },
   {
     title: "Punishments",

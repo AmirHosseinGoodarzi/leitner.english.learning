@@ -540,6 +540,7 @@ export default {
       <Example>There is too much pollution in Tehran.</Example>
       <Rule>too many + countable nouns</Rule>
       <Example>There are too many cars in Tehran.</Example>
+      <br />
       <Rule>
         And we use enough to say something is the correct number or amount:
       </Rule>
@@ -551,6 +552,21 @@ export default {
       <Example>I don’t have enough money to buy a house.</Example>
       <Rule>enough + noun </Rule>
       <Example>I have enough time to pack up. </Example>
+    </div>
+  ),
+  "/so-such": (
+    <div>
+      <Rule>So + adjective</Rule>
+      <Example>Last year, we went to a trip. It was so amazing!</Example>
+      <br />
+      <Rule>
+        “Such” is an English determiner that is used to refer to something that
+        has already been mentioned or is about to be mentioned. It can also be
+        used to indicate a high degree of something. Here are some examples:
+      </Rule>
+      <Example>I have never seen such a beautiful sunset before.</Example>
+      <Example>She is such a talented musician.</Example>
+      <Example>I am not used to such cold weather.</Example>
     </div>
   ),
   "/passive": (
