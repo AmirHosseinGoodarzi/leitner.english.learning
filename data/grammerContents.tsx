@@ -2,7 +2,7 @@ import { Rule, Example, Accordion } from "@/components/grammerContents";
 import ROUTES_OBJECT from "@/utils/RoutesObject";
 import Link from "next/link";
 
-export default {
+const grammerContents = {
   "/so_questions": (
     <div className="flex flex-col gap-8">
       <Accordion title="Subject Questions (No auxiliary)">
@@ -781,57 +781,32 @@ export default {
           </thead>
           <tbody>
             <tr>
-              <td>
-                Present Simple
-                <p className="italic">I want to work abroad.</p>
-              </td>
-              <td>
-                Past Simple
-                <p className="italic">He said that he wanted to work abroad.</p>
-              </td>
+              <td>Present simple</td>
+              <td>Past simple</td>
             </tr>
             <tr>
-              <td>
-                Present Continuous
-                <p className="italic">I’m working in a company.</p>
-              </td>
-              <td>
-                Past continuous
-                <p className="italic">
-                  He told me he was working in a company.
-                </p>
-              </td>
+              <td>Present continuous</td>
+              <td>Past continuous</td>
             </tr>
             <tr>
-              <td>
-                am/is/are going to
-                <p className="italic">I’m going to London next week.</p>
-              </td>
-              <td>
-                was/were going to
-                <p className="italic">He said that he was going to London.</p>
-              </td>
+              <td>Past simple</td>
+              <td>Past perfect</td>
             </tr>
             <tr>
-              <td>
-                Will
-                <p className="italic">I’ll be back next summer.</p>
-              </td>
-
-              <td>
-                Would
-                <p className="italic">He said that he’d be back next summer.</p>
-              </td>
+              <td>Present perfect</td>
+              <td>Past perfect</td>
             </tr>
             <tr>
-              <td>
-                Can
-                <p className="italic">I can save about 100$ a week.</p>
-              </td>
-              <td>
-                Could
-                <p className="italic">He told me he could save about 100$</p>
-              </td>
+              <td>am/is/are going to</td>
+              <td>was/were going to</td>
+            </tr>
+            <tr>
+              <td>Will</td>
+              <td>Would</td>
+            </tr>
+            <tr>
+              <td>Can</td>
+              <td>Could</td>
             </tr>
             <tr>
               <td>May</td>
@@ -848,6 +823,69 @@ export default {
           </tbody>
         </table>
       </div>
+      <br />
+      <Example>
+        <p>’I want to be famous one day,’ said Jane.</p>
+        <p>
+          {"=>"} Jane told me, She <span className="underline">wanted</span> to
+          be famous one day.
+        </p>
+      </Example>
+      <Example>
+        <p>Dan said, ’I’ve always wanted to travel’.</p>
+        <p>
+          {"=>"} He said that, He <span className="underline">’d always</span>{" "}
+          wanted to travel.
+        </p>
+      </Example>
+      <Example>
+        <p>Matthew told us, ’I spent a lot of time in theatre school’.</p>
+        <p>
+          {"=>"} He claimed that, He <span className="underline">’d spent</span>{" "}
+          a lot of time in theatre school
+        </p>
+      </Example>
+      <Example>
+        <p>’I’m not going to waste my life singing,’ said Michelle.</p>
+        <p>
+          {"=>"} Michelle said that, She{" "}
+          <span className="underline">was not going to</span> waste her life
+          singing.
+        </p>
+      </Example>
+      <Rule>
+        Questions
+        <ul className="text-black dark:text-white pl-5 lg:pl-10 list-decimal">
+          <li>We must convert questions to a simple statement.</li>
+          <li>
+            Tip: We use ( if ) or whether to report ( Yes/No ) questions.{" "}
+          </li>
+        </ul>
+      </Rule>
+      <Example>
+        <p>’Are you ready?’ John asked.</p>
+        <p>
+          {"=>"} John asked me <span className="underline">if</span> I am ready.
+        </p>
+      </Example>
+      <Example>
+        <p>’What is that?’ Kara asked.</p>
+        <p>{"=>"} She asked what it was.</p>
+      </Example>
+      <Example>
+        <p>’Do you want any help?’ Jacky asked.</p>
+        <p>
+          {"=>"} He asked me <span className="underline">if</span>{" "}
+          <span className="underline">I wanted</span> any help.
+        </p>
+      </Example>
+      <Example>
+        <p>’Are you going to meet your mom?’ my dad asked my brother.</p>
+        <p>
+          {"=>"} My dad asked my brother <span className="underline">if</span>{" "}
+          he <span className="underline">was going to</span> meet his mom.
+        </p>
+      </Example>
     </div>
   ),
   "/tag-questions": (
@@ -983,3 +1021,4 @@ export default {
     </div>
   ),
 };
+export default grammerContents;
