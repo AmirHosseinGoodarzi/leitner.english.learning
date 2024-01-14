@@ -1,4 +1,4 @@
-export default [
+const grammar = [
   {
     title: "Subject and Object Questions",
     href: "/so_questions",
@@ -101,8 +101,7 @@ export default [
   {
     title: "So | Such",
     href: "/so-such",
-    description:
-      "We use so to say something is cool and very satisfying.",
+    description: "We use so to say something is cool and very satisfying.",
   },
   {
     title: "Passive",
@@ -171,3 +170,5 @@ export default [
       "In many languages, adjectives denoting attributes usually occur in a specific order.",
   },
 ];
+
+export default grammar;

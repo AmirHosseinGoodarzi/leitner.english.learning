@@ -1,4 +1,4 @@
-export default [
+const speaking = [
   {
     title: "Greetings",
     href: "/greetings",
@@ -92,3 +92,4 @@ export default [
     href: "/others",
   },
 ];
+export default speaking;

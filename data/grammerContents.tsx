@@ -363,10 +363,58 @@ const grammerContents = {
   ),
   "/quantifiers": (
     <div>
-      <Rule>
-        Countable nouns: towel, toothbrush, razor, sun hat, T-shirt, ...
-      </Rule>
-      <Rule>Uncountable nouns: tea, shampoo, soap, chewing gum, ...</Rule>
+      <div className="custom_table">
+        <table>
+          <thead>
+            <tr>
+              <th colSpan={2}>Normally countable nouns</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>people, animals and plants</td>
+              <td>a child, a whale, ...</td>
+            </tr>
+            <tr>
+              <td>objects</td>
+              <td>a pool, a book, ...</td>
+            </tr>
+            <tr>
+              <td>units of messurement</td>
+              <td>a metre, a kilogramme, ...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br />
+      <div className="custom_table">
+        <table>
+          <thead>
+            <tr>
+              <th colSpan={2}>Normally uncountable nouns</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>material, liquids or gases</td>
+              <td>plastic, oxygen, ...</td>
+            </tr>
+            <tr>
+              <td>activites</td>
+              <td>swimming, eating, ...</td>
+            </tr>
+            <tr>
+              <td>languages</td>
+              <td>English, French, ...</td>
+            </tr>
+            <tr>
+              <td>Abstract nouns</td>
+              <td>fear, happiness, ...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br />
       <Rule>✅We usually use some in positive sentences.</Rule>
       <Example>There is some tea </Example>
       <Example>There are some towels</Example>

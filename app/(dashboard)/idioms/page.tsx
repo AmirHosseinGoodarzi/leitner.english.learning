@@ -51,7 +51,7 @@ export default function Idioms() {
         </Rule>
         <br />
         <br />
-        <Example>The money burns a hole in my pocket.</Example>
+        <Example>The money burns a hole in the pocket.</Example>
         <Rule>Someone who spends money as soon as it is earned.</Rule>
         <br />
         <br />
@@ -244,6 +244,63 @@ export default function Idioms() {
           </span>
           <div className="ml-20">Inam shans maye XD</div>
         </Rule>
+        <br />
+        <br />
+        <Example>Like a drowned rat.</Example>
+        <Example>It’s hot as a doggy day.</Example>
+        <Example>Shiver (up and) down my spine</Example>
+        <Rule>A frightened or excited feeling</Rule>
+        <br />
+        <br />
+        <Example>Someone’s cup of tea</Example>
+        <Rule>
+          Something that someone likes or is good at —usually used in negative
+          statements
+        </Rule>
+        <br />
+        <br />
+        <Example>A bad workman always blames his tools!</Example>
+        <Example>I’m all ears!</Example>
+        <Example>I’ fuming.</Example>
+        <Rule>Being very angry.</Rule>
+        <br />
+        <br />
+        <Example>I have bigger fish to fry.</Example>
+        <Rule>I have more important things to do.</Rule>
+        <br />
+        <br />
+        <Example>My lips are sealed.</Example>
+        <Rule>I won’t tell anyone.</Rule>
+        <br />
+        <br />
+        <Example>It’s on me.</Example>
+        <Rule>I will pay the bill.</Rule>
+        <br />
+        <br />
+        <Example>Sleep on it.</Example>
+        <Rule>Think about it.</Rule>
+        <br />
+        <br />
+        <Example>He’s pulling my leg.</Example>
+        <Rule>
+          to tell someone something that is not true as a way of joking with the
+          person
+        </Rule>
+        <br />
+        <br />
+        <Example>A flash in the pan</Example>
+        <Rule>
+          something that happened only once or for a short time and was not
+          repeated
+        </Rule>
+        <Rule>something that is interesting for only a short time</Rule>
+        <br />
+        <br />
+        <Example>
+          Having a lot of iron in fire
+          <br />
+          Being as busy as a bee
+        </Example>
       </div>
     </div>
   );

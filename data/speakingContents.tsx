@@ -1,6 +1,6 @@
 import { Example, Rule } from "@/components/grammerContents";
 
-export default {
+const speakingContents = {
   "/greetings": (
     <div className="flex flex-col">
       <p className="text-white font-bold text-3xl">Formal</p>
@@ -24,32 +24,33 @@ export default {
       <p>How are things going?</p>
       <p>How are things with you?</p>
       <p>How is the world treating you?</p>
-      <p>What's the vibe today?</p>
-      <p>What's shakin?</p>
+      <p>What’s the vibe today?</p>
+      <p>What’s shakin?</p>
       <br />
       <br />
       <Rule>Responding</Rule>
       <div className="text-2xl">😊</div>
       <div>Had sunshine all day long.</div>
       <div>Better now that you asked.</div>
-      <div>Could'nt be better</div>
+      <div>Could’nt be better</div>
       <div>Peachy!</div>
       <br />
       <div className="text-2xl">😔</div>
       <div>Not exactly my best day.</div>
       <div>Survivng, I guess!</div>
-      <div>I'd be lying if I said I'm fine.</div>
+      <div>I’d be lying if I said I’m fine.</div>
       <div>You tell me.</div>
       <br />
       <br />
       <Rule>Goodbye</Rule>
       <div>Catch you later.</div>
-      <div>I'll be out of your hair.</div>
+      <div>I’ll be out of your hair.</div>
       <div>So long!</div>
       <div>I already miss you.</div>
-      <div>I'm off.</div>
+      <div>I’m off.</div>
       <div>Peace out!</div>
       <div>I gotta jet!</div>
+      <div>Farewell!</div>
     </div>
   ),
   "/directions": (
@@ -82,9 +83,25 @@ export default {
       <p>That’s the wrong one.</p>
       <p>It’s not useful.</p>
       <br />
+      <hr />
+      <br />
+      <p className="text-white font-bold text-3xl">➕ Surprising</p>
+      <p>I get so absultant</p>
+      <p>It gives me great vibes</p>
+      <p>It blows my mind</p>
+      <br />
+      <p className="text-white font-bold text-3xl">➖</p>
+      <p>I’m so damn shocked</p>
+      <p>I lose my shit</p>
+      <p>It gets me so irritated</p>
+      <br />
+      <hr />
+      <br />
       <p className="text-white font-bold text-3xl">🤢 Hate something</p>
       <p>That’s bullied to me!</p>
       <p>It riles me up!</p>
+      <br />
+      <hr />
       <br />
       <p className="text-white font-bold text-3xl">Nosey reactions</p>
       <p>It’s too rude !</p>
@@ -201,19 +218,19 @@ export default {
       <p>Whereabouts in Tehran?</p>
       <p>Do you live near here?</p>
       <p>Meeting people in the past</p>
-      <p>Didn't we meet there?</p>
-      <p>People's job</p>
+      <p>Didn’t we meet there?</p>
+      <p>People’s job</p>
       <p>What do you do?</p>
-      <p>You are a ( lawyer ). Aren't you?</p>
+      <p>You are a ( lawyer ). Aren’t you?</p>
       <br />
       <p className="text-white font-bold text-3xl">Ending Conversation</p>
       <p>A. It was very nice to meet you.</p>
       <p>B. You too.</p>
       <p>A. We should get together sometime.</p>
-      <p>B. Yes, that's a good idea.</p>
+      <p>B. Yes, that’s a good idea.</p>
       <p>A. See you later maybe.</p>
       <p>B. Yes, see you.</p>
-      <p>A. It's great to see you again.</p>
+      <p>A. It’s great to see you again.</p>
       <p>B. And you.</p>
     </div>
   ),
@@ -239,7 +256,7 @@ export default {
       <p>Maybe you’re right.</p>
       <p>Yes, I think so.</p>
       <p>Yes, definitely.</p>
-      <p>You've persuaded me = Now, I agree with you.</p>
+      <p>You’ve persuaded me = Now, I agree with you.</p>
       <br />
       <p className="text-white font-bold text-3xl">Disagreeing</p>
       <p>I’m not sure about that.</p>
@@ -291,7 +308,7 @@ export default {
       </Example>
       <Rule>➖ Oh, + I + auxiliary or be</Rule>
       <Example>
-        <p>A: I didn't do much sport at school.</p>
+        <p>A: I didn’t do much sport at school.</p>
         <p>B: Oh I did.</p>
       </Example>
     </div>
@@ -378,10 +395,18 @@ export default {
       <p>B: Sure, just say when !</p>
     </div>
   ),
+  "/describing-things": (
+    <div>
+      <p>It’s sorta .......</p>
+      <p>It’s kina ......</p>
+      <p>It’s consumed in.....</p>
+      <p>It may come in handy when .....</p>
+    </div>
+  ),
   "/others": (
     <div className="flex flex-col gap-5">
       <p>Consider it done 👍</p>
-      <p>I can't thank you enough.</p>
+      <p>I can’t thank you enough.</p>
       <p>It’s up to you.</p>
       <p>Where are you off to? ( informal )</p>
       <p>Everything seems to be in order ….</p>
@@ -390,7 +415,7 @@ export default {
       <p>It’s for your own benefit.</p>
       <p>Frankly,..... = To be frank …… = Honestly speaking ….</p>
       <p>Look after yourself = Take care </p>
-      <p>This one's on me.</p>
+      <p>This one’s on me.</p>
       <p>That’s very kind of you.</p>
       <p>
         I’ll probably see you around = We might meet each other in somewhere in
@@ -404,9 +429,9 @@ export default {
       <p>We missed your absence</p>
       <p>Make your money rain.</p>
       <p>I wouldn’t splash cash.</p>
-      <p>It's not worth ..…ing. ( buying, trying, … )</p>
+      <p>It’s not worth ..…ing. ( buying, trying, … )</p>
       <p>Much obliged.</p>
-      <p>I’m afraid it's negative.</p>
+      <p>I’m afraid it’s negative.</p>
       <p>Much obliged.</p>
       <br />
       <p>Light the cigarette.</p>
@@ -414,3 +439,4 @@ export default {
     </div>
   ),
 };
+export default speakingContents;
